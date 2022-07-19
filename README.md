@@ -39,13 +39,13 @@
   ````javascript
   const PrivateRoute = () => {
 
-    const { isLoggedIn, isLoading } = useContext(AuthContext)
+    const { isLoggedIn, user } = useContext(AuthContext)
 
     if (isLoading) {
         return <LoadingSpinner />
     }
 
-    if (!isLoggedIn) {
+    if (!user) {
         return <Navigate to="/inicio-sesion" />
     }
 
