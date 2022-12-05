@@ -54,8 +54,9 @@
   ````
 - Este componente se comporta como una ruta superior que anida las protegidas:
   ````javascript
-  <Route path="/perfil" element={<PrivateRoute />}>
-      <Route path="" element={<UserProfile />} />
+  <Route element={<PrivateRoute />}>
+    <Route path="/perfil" element={<h1>MI PERFIL (PROTEGIDA)</h1>} />
+    <Route path="/admin" element={<h1>ADMIN (PROTEGIDA)</h1>} />
   </Route>
   ````
 
